@@ -1,0 +1,41 @@
+query getAllPages{
+getAllPages{
+ id
+  title
+  description
+  image_url 
+} 
+}
+query getPage($id:Int){
+  getPage(id:$id){
+    id
+    title
+    description
+    image_url
+  }
+}
+mutation createPage($title:String,$description:String,$image_url:String){
+  createPage(title:$title,description:$description,image_url:$image_url){
+    id
+    title
+    description
+    image_url
+  }
+}
+mutation updatePage($id:Int,$title:String,$description:String,$image_url:String)
+  {
+  updatePage(id:$id,title:$title,description:$description,image_url:$image_url){
+    id
+    title
+    description
+    image_url
+  } 
+}
+mutation deletePage($id:Int){
+  deletePage(id:$id){
+   id
+    title
+    description
+    image_url
+  } 
+}
